@@ -1,0 +1,152 @@
+:root {
+  font-size: 24px;
+  --left-section-width: clamp(300px, 40vw, 850px);
+  --right-section-width: 60vw;
+  --input-sections-width: 50ch;
+  --text-section-max-height: 10ch;
+}
+
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* background: */
+
+main {
+  display: grid;
+  grid-template: 1fr / var(--left-section-width) var(--right-section-width);
+}
+
+#rightBackground,
+#leftBackground {
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#leftBackground {
+  grid-column: 1 / 2;
+  width: var(--left-section-width);
+  background-image: url(./img/jonnelle-yankovich-MQ4pyvRdXnY-unsplash.jpg);
+  background-color: #046b34;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+#rightBackground {
+  grid-column: 2 / 3;
+  left: var(--left-section-width);
+  width: var(--right-section-width);
+  background-color: rgb(243, 239, 239);
+}
+
+/* front */
+
+#front {
+  display: grid;
+  grid-area: 1 / 1 / 3 / 3;
+  grid-template: calc(var(--text-section-max-height) * 2.5) 1fr / var(--left-section-width) var(--right-section-width);
+  align-items: center;
+}
+
+/* left */
+
+#logo {
+  grid-row: 1 / 2;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.650);
+}
+
+#quack {
+  font-size: 3rem;
+}
+
+#logo > img {
+  max-height: 10ch;
+}
+
+#emptyLeft {
+  grid-row: 2 / 3;
+}
+
+/* right */
+
+#textTop,
+#formInnerContainer > h4,
+.formInputContainers,
+#signupContainer {
+  margin: 0 25px;
+}
+
+#textTop {
+  max-width: calc(var(--input-sections-width) + 5ch);
+  font-weight: 600;
+  align-self: end;
+  margin-bottom: 2ch;
+}
+
+#formOuterContainer {
+  background-color: #ffffff;
+  box-shadow: 0px 8px 15px -8px rgb(207, 207, 207); 
+}
+
+#formInnerContainer {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 1rem;
+  max-width: var(--input-sections-width);
+  padding: 20px 0 30px 0;
+}
+
+#formInnerContainer > h4 {
+  grid-column: 1 / 3;
+  align-self: last baseline;
+}
+
+.formInputContainers {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  row-gap: 0.10rem;
+
+}
+
+.formInputContainers > label {
+  align-self: end;
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  
+}
+
+.formInputContainers > input {
+  font-size: 0.65rem;
+}
+
+/* bottom button */
+
+#signupContainer {
+  width: fit-content;
+  margin-top: 2ch;
+  max-width: calc((var(--input-sections-width) / 2) - 10px - (25px * 2));
+}
+
+#signupContainer > button {
+  font-size: 1rem;
+  border-radius: 15px;
+  padding: 15px 50px;
+  color: white;
+  background-color: #046b34;
+}
+
+#signupContainer > #already {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
