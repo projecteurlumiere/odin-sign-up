@@ -4,6 +4,8 @@
   --right-section-width: 60vw;
   --input-sections-width: 50ch;
   --text-section-max-height: 10ch;
+  --default-border-color: rgb(166, 166, 166);
+  --invalid-border-color: var(--default-border-color);
 }
 
 body {
@@ -28,7 +30,7 @@ main {
 #leftBackground {
   grid-column: 1 / 2;
   width: var(--left-section-width);
-  background-image: url(./img/jonnelle-yankovich-MQ4pyvRdXnY-unsplash.jpg);
+  background-image: url(./misc/jonnelle-yankovich-MQ4pyvRdXnY-unsplash.jpg);
   background-color: #046b34;
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,8 +130,18 @@ main {
 
 .formInputContainers > input {
   font-size: 0.65rem;
-  border: solid 1px rgb(166, 166, 166);
+  border: solid 1px var(--default-border-color);
   border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9D20E6;
+  box-shadow: 0px 0px 2px #9D20E6;
+}
+
+input:invalid {
+  border-color: var(--invalid-border-color);
 }
 
 /* bottom button */
