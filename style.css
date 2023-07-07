@@ -132,14 +132,14 @@ form {
 .formInputContainers > label {
   align-self: end;
   font-weight: 800;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   
 }
 
 .formInputContainers > input {
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   border: solid 1px var(--default-border-color);
   border-radius: 5px;
 }
@@ -238,7 +238,7 @@ input:invalid {
 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   #formInnerContainer {
     display: flex;
     flex-direction: column;
