@@ -231,6 +231,11 @@ input:invalid {
     justify-content: center;
     width: 100%;
   }
+
+  #signupContainer {
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 550px) {
@@ -251,7 +256,4 @@ input:invalid {
     visibility: hidden;
   }
 
-  #already {
-    text-align: center;
-  }
 }
